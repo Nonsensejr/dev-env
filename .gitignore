@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Not these
+!install_env.sh
+!.gitignore
+!dwm/
+!dwm/config.h
+!st
+!st/config.h
+!.xbindkeysrc
+!.keynavrc
+!.tmux.conf
+!.fehbg
+
