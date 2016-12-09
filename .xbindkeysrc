@@ -10,6 +10,15 @@
 "if amixer get Master | grep off; then amixer -D pulse sset Master unmute; else amixer -D pulse sset Master mute; fi"
     XF86AudioMute
 
+"echo seek_chapter 1 > /tmp/mplayercontrol"
+XF86AudioNext
+
+"echo seek_chapter -1 > /tmp/mplayercontrol"
+XF86AudioPrev
+
+"echo pause > /tmp/mplayercontrol"
+XF86AudioPlay
+
 # slock
 "slock"
     Pause
