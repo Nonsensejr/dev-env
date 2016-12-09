@@ -19,6 +19,9 @@ XF86AudioPrev
 "echo pause > /tmp/mplayercontrol"
 XF86AudioPlay
 
+"eject"
+Scroll_Lock
+
 # slock
 "slock"
     Pause
