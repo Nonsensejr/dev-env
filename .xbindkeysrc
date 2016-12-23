@@ -10,13 +10,13 @@
 "if amixer get Master | grep off; then amixer -D pulse sset Master unmute; else amixer -D pulse sset Master mute; fi"
     XF86AudioMute
 
-"echo seek_chapter 1 > /tmp/mplayercontrol"
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 XF86AudioNext
 
-"echo seek_chapter -1 > /tmp/mplayercontrol"
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 XF86AudioPrev
 
-"echo pause > /tmp/mplayercontrol"
+"dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause"
 XF86AudioPlay
 
 "eject"

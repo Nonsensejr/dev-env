@@ -1,4 +1,0 @@
-#!/bin/bash
-clear
-mkfifo /tmp/mplayercontrol
-mplayer cdda:// -slave -cache 5000 -cache-min 90 -ao pulse -nolirc -input file=/tmp/mplayercontrol
