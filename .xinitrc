@@ -41,6 +41,7 @@ devmon &
 xbindkeys &
 keynav &
 rdtc &
+xautolock -time 10 -locker slock &
 
 #desktop managin tools
 exec dwm 
