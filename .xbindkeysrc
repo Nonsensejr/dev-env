@@ -1,14 +1,14 @@
 # Increase Volume
-"amixer -D pulse sset Master 5%+"
-    XF86AudioRaiseVolume
+"amixer sset Master 5%+"
+XF86AudioRaiseVolume
 
 # Decrease Volume
-"amixer -D pulse sset Master 5%-"
-    XF86AudioLowerVolume
+"amixer sset Master 5%-"
+XF86AudioLowerVolume
 
 # Mute
-"if amixer get Master | grep off; then amixer -D pulse sset Master unmute; else amixer -D pulse sset Master mute; fi"
-    XF86AudioMute
+"if amixer get Master | grep off; then amixer sset Master unmute; else amixer sset Master mute; fi"
+XF86AudioMute
 
 "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 XF86AudioNext
