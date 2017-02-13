@@ -34,7 +34,7 @@ fi
 
 xrandr --setprovideroutputsource modesetting NVIDIA-0
 xrandr --output eDP-1-1 --mode 1920x1080 
-xrandr --output DP-1-1 --mode 1920x1080 --right-of eDP-1-1
+xrandr --output DP-1-1 --primary --mode 1920x1080 --right-of eDP-1-1
 xrandr --output HDMI-1-1 --mode 1366x768 --right-of DP-1-1
 
 eval $(~/.fehbg)
