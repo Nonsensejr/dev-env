@@ -1,0 +1,75 @@
+# Header
+source "gpg2 -dq ~/.mutt/.my_pass.gpg |"
+source "~/.mutt/macros"
+set editor=`echo \$EDITOR`
+set sleep_time = 0
+
+# Sidebar
+set sidebar_visible = yes
+set sidebar_short_path = yes
+mailboxes "+-- My mailbox -----------"
+
+# Recieve
+set imap_user=jordan.lin@medicustek.com
+set folder=imaps://officemail.cloudmax.com.tw:993
+set spoolfile=+INBOX
+mailboxes =INBOX 
+
+# Sending
+set record = +Sent
+set realname = 'Jordan Lin'
+set from = $my_user 
+set use_from = yes
+set smtp_url = smtps://$imap_user:$imap_pass@officemail.cloudmax.com.tw
+set ssl_force_tls = yes
+set send_charset = "us-ascii:utf-8"
+set signature = "~/.mutt/sig
+
+# Mailbox
+set mbox_type = Maildir
+set folder = ~/mail
+set header_cache = ~/.cache/mutt
+set message_cachedir=~/.cache/mutt/messages
+
+# Viewing
+alternative_order text/plain text/html
+set assumed_charset = "big5:utf-8"
+set mailcap_path = ~/.mutt/mailcap
+auto_view text/html
+set date_format="%y-%m-%d %T"
+set index_format="%2C | %Z [%d] %-30.30F (%-4.4c) %s"
+
+# Key binding
+bind pager j next-line
+bind pager k previous-line
+bind pager g top
+bind pager G bottom
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind attach,index g first-entry
+bind attach,index G last-entry
+bind index <F5> imap-fetch-mail
+bind index,pager <F9> sidebar-toggle-visible
+bind editor <Tab> complete-query
+bind index,pager ^? previous-line
+
+## Abook
+set query_command = "abook --mutt-query '%s'"
+
+# Palette for use with the Linux console.  Black background.
+color hdrdefault blue black
+color quoted blue black
+color signature blue black
+color attachment red black
+color prompt brightmagenta black
+color message brightred black
+color error brightred black
+color indicator black red
+color status brightgreen blue
+color tree white black
+color normal white black
+color markers red black
+color search white black
+color tilde brightmagenta black
+color index blue black ~F
+color index red black "~N|~O"

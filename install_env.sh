@@ -4,3 +4,5 @@ sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 git clone https://github.com/Nonsensejr/oh-my-zsh zsh_install
 sh ~/zsh_install/tools/install.sh
+
+git clone https://github.com/Nonsensejr/tpm ~/.tmux/plugins/tpm

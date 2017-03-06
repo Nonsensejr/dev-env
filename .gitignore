@@ -15,3 +15,8 @@
 !.xinitrc
 !boombox
 !.zlogin
+!.mutt/
+!.mutt/macros
+!.mutt/muttrc
+!.mutt/mailcap
+!.mutt/sig

@@ -1,0 +1,2 @@
+macro attach 'V' "<pipe-entry>cat >~/.cache/mutt/mail.html && chromium ~/.cache/mutt/mail.html && chmode 755 ~/.cache/mutt/mail.html && rm ~/.cache/mutt/mail.html<enter>"
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
