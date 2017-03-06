@@ -1,1 +1,3 @@
 text/html; w3m -I %{charset} -T text/html; copiousoutput;
+text/calendar; ~/.mutt/mutt-ics; copiousoutput; 
+application/ics; mutt-ics; copiousoutput
