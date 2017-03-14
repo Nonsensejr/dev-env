@@ -4,6 +4,7 @@
 # Not these
 !install_env.sh
 !.gitignore
+!.gitconfig
 !dwm/
 !dwm/config.h
 !st
