@@ -43,6 +43,7 @@ devmon &
 xbindkeys &
 keynav &
 rdtc &
+redshift &
 xautolock -time 10 -locker slock &
 slstatus -d
 
