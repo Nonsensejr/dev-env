@@ -1,9 +1,30 @@
-[user]
-	email = jordan.lin@medicustek.com
-	name = Jord Lin
-[http]
-    sslVerify = false
 [alias]
-    lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
-    lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
-    plog = !"git lg2"
+        co = checkout
+        ci = commit
+        cin = commit --no-verify
+        cp = cherry-pick
+        st = status
+        df = diff --ignore-space-change
+        dc = diff --ignore-space-change --cached
+        hist = log --graph --abbrev-commit --decorate --date=default --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+        type = cat-file -t
+        dump = cat-file -p
+        pr  = pull --rebase
+        br = "!f(){ git for-each-ref --sort=-committerdate --format='%(refname:short)' refs/heads/ --count=10 | cat -n | sed -n $1p | (test "$1" && (sed -e s/^[[:space:][:digit:]]*// | xargs git checkout > /dev/null) || cat) }; f"
+[user]
+		email = jord@kloudless.com
+		name = Jord Lin
+[core]
+        autocrlf = input
+        safecrlf = false
+[branch]
+        autosetuprebase = always
+[color]
+        ui = true
+[merge]
+        ff = no
+[push]
+        default = simple
+[rebase]
+        instructionFormat = %s [%an]
+
